@@ -66,12 +66,13 @@ function displayConnectionRequests() {
                 <td>${request.loadType}</td>
                 <td>${request.applStatus}</td>
                 <td>
-                    <button class="btn btn-success mt-1 btn-approve" data-id="${request.connect_id}">Approve</button>
-                    <button class="btn btn-danger mt-1 btn-reject" data-toggle="modal" data-target="#rejectModal" data-id="${request.connect_id}">Reject</button>
         `;
 
         if (request.applStatus === 'Approved') {
             row += `<button type="button" id="addBillModalButton" class="btn mt-1 btn-primary btn-addBill" data-toggle="modal" data-target="#addBillModal" data-id="${request.connect_id}">Generate Bill</button>`;
+        } else{
+            row += `<button class="btn btn-success mt-1 btn-approve" data-id="${request.connect_id}">Approve</button>
+                    <button class="btn btn-danger mt-1 btn-reject" data-toggle="modal" data-target="#rejectModal" data-id="${request.connect_id}">Reject</button>`;
         }
 
         row += `
