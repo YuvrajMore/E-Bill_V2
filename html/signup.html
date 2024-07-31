@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sign Up Form</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.jpg" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Additional styling to ensure placeholder visibility */
+    .form-control::placeholder {
+      color: #6c757d;
+      /* Placeholder color for dark mode */
+    }
+  </style>
+</head>
+
+<body class="d-flex align-items-center justify-content-center" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-5">
+        <div class="card" style="border-color: #39a9c9; overflow: hidden; border-radius: 30px;">
+          <div class="card-body p-4">
+            <form id="signupForm">
+
+              <h2 class="mb-0 text-center">Sign up on E-Bill portal</h2>
+              <div class="mb-1 text-center">
+                <a class="btn btn-link mb-2" id="toggle-theme-button" style="color: #0ea2bc; text-decoration: none;"
+                  href="#">Switch Theme</a>
+              </div>
+
+              <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name"
+                    autofocus  data-toggle="tooltip"
+                    title="Enter your first name (at least 3 letters and only letters.)">
+                    <small id="fname_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name"
+                    data-toggle="tooltip"
+                    title="Enter your last name (at least 3 letters and only letters. Or leave empty.)">
+                    <small id="lname_warn"></small>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="input-group">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="New Password"
+                    data-toggle="tooltip"
+                    title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character. Avoid using single/double quotes">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" style="border: 1px solid #39a9c9"
+                      id="togglePassword">
+                      <i class="fas fa-eye" id="eye"></i>
+                    </button>
+                  </div>
+                  <small id="pwd_warn"></small>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email address"
+                  data-toggle="tooltip" title="Enter a valid email address">
+                  <small id="email_warn"></small>
+              </div>
+
+              <div class="mb-3">
+                <input type="tel" class="form-control" id="number" name="number" placeholder="Phone Number"
+                  data-toggle="tooltip" title="Enter a 10-digit phone number">
+                  <small id="num_warn"></small>
+              </div>
+
+              <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+
+                <div class="col mb-1">
+                  <input type="text" min=1 class="form-control" id="house-flat" name="house-flat"
+                    placeholder="House/Flat/Plot No." data-toggle="tooltip"
+                    title="Only numbers allowed, or leave empty.">
+                    <small id="house_no_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="house-name" name="house-name"
+                    placeholder="House/Building Name"  data-toggle="tooltip"
+                    title="Only alphabets and numbers are allowed.">
+                    <small id="house_name_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="locality" name="locality" placeholder="Locality"
+                     data-toggle="tooltip" title="Only alphabets, numbers, comma and fullstop are allowed.">
+                     <small id="locality_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="city" name="city" placeholder="City" 
+                    data-toggle="tooltip" title="Only alphabets allowed.">
+                    <small id="city_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="district" name="district" placeholder="District" 
+                    data-toggle="tooltip" title="Only alphabets allowed.">
+                    <small id="district_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <input type="text" class="form-control" id="state" name="state" placeholder="State" 
+                    data-toggle="tooltip" title="Only alphabets allowed">
+                    <small id="state_warn"></small>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="form-check">
+                  <span>Already have an account ?</span><a class="btn btn-link mb-1"
+                    style="color: #0ea2bc; text-decoration: none;" href="../index.html">Log in to portal</a>
+                </div>
+              </div>
+
+              <div class="mb-3 d-flex justify-content-start">
+                <input type="submit" id="signup_btn" value="Sign up" class="btn btn-primary mx-2"
+                  style="background-color: #0ea2bc; border-color: #0ea2bc;">
+                <input id="reset_btn" type="reset" value="Reset Form" class="btn btn-secondary mx-2">
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../js/signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Login to E-Bill Portal</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /*styling for placeholder visibility */
+    .form-control::placeholder {
+      color: #6c757d;
+    };
+  </style>
+</head>
+
+<body class="d-flex align-items-center justify-content-center vh-100" style="background-color: #f8f9fa;">
+  <div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4">
+        <div class="card" style="border-color: #39a9c9; overflow: hidden; border-radius: 30px;">
+          <div class="card-body p-5">
+            <form id="login_form" name="login_form" target="_self">
+              <h1 class="mb-3 text-center">Log in to E-Bill portal</h1>
+              
+              <div class="d-flex flex-row justify-content-between mb-4 text-center">
+                <a class="btn btn-link mb-2" style="color: #0ea2bc; text-decoration: none;"
+                  href="html_admin/admin_login.html">Admin login</a>
+                <a class="btn btn-link mb-2" id="toggle-theme-button" style="color: #0ea2bc; text-decoration: none;"
+                  href="#">Switch Theme</a>
+              </div>
+              
+              <div class="form-group mb-4">
+                <input type="text" class="form-control" id="email" name="email" autofocus placeholder="Email address"
+                  data-toggle="tooltip" title="Enter your registered email address.">
+                  <small id="email_warn"></small>
+              </div>
+
+              <div class="form-group mb-4 input-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                  data-toggle="tooltip" title="Enter password created during registration. Use forgot password link if you can't remember your password.">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary form-control" style="border-color: #39a9c9;" type="button"
+                    id="togglePassword">
+                    <i class="fas fa-eye" id="eye"></i>
+                  </button>
+                </div>
+                <small id="pwd_warn"></small>
+              </div>
+
+              <a href="html/signup.html" class="btn btn-link mb-3" style="color: #0ea2bc; text-decoration: none;">Create
+                new account</a><br>
+
+              <input type="submit" id="login_btn" form="login_form" value="Log in" class="btn mt-3"
+                style="color: white; background-color: #0ea2bc; border-color: #0ea2bc;">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

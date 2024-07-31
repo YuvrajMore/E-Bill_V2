@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Apply for New Connection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.jpg" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Updated: Jun 02 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="text-light bg-dark header d-flex sticky-top">
+    <div class="bg-dark text-light container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="homepage.html">
+        <img src="../assets/img/logo.jpg" class="bg-dark text-light img rounded" alt="E-Bill Logo" width="70px"
+          height="70px">
+      </a>
+      <nav id="navmenu" class="bg-dark text-light navmenu">
+        <ul>
+          <li><a href="homepage.html">Home<br></a></li>
+          <li><a href="new_connect.html" class="active">New Connection</a></li>
+          <li><a href="payment.html">Pay Electricity Bill</a></li>
+          <li><a href="history.html">Payment History</a></li>
+          <li><a href="complaints.html">Complaints</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li class="bg-dark text-light dropdown"><a href="#"><span>User Settings</span> <i
+                class="bg-dark text-light bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a class="bg-dark text-light dropdown-item" href="#">Set target electricity usage</a></li>
+              <li><a class="bg-dark text-light dropdown-item" href="#">Calculate carbon footprint</a></li>
+              <li><a class="bg-dark text-light dropdown-item" href="#">Subscribe to newsletter</a></li>
+              <li><a class="bg-dark text-light dropdown-item" href="#">Change language</a></li>
+              <li id="toggle-theme-button"><a class="bg-dark text-light dropdown-item" href="#">Switch theme</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bg-dark text-light mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <button id="logout_btn" class="btn btn-getstarted">Log out</button>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Starter Section Section -->
+    <section id="starter-section" class="starter-section section d-flex justify-content-center align-items-center">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form name="new_connect_form" id="new_connect_form">
+              <h4>Fill this form to apply for new electricity connection.</h4><br>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="useProfileAddress" name="useProfileAddress">
+                <label class="form-check-label" for="useProfileAddress">I need a new connection at my personal
+                  address.</label>
+              </div>
+
+              <div id="addressFields" class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+                <h5>Enter Address for Connection</h5>
+                <label class="form-label"></label>
+
+                <div class="col mb-1">
+                  <label for="house-flat" class="form-label">House/Flat/Plot Number:</label>
+                  <input type="text" class="form-control" id="house-flat" name="house-flat" data-toggle="tooltip"
+                    title="Only numbers allowed, or leave empty.">
+                  <small id="house_no_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <label for="house-name" class="form-label">House/Apartment Name:</label>
+                  <input type="text" class="form-control" id="house-name" name="house-name" data-toggle="tooltip"
+                    title="Only alphabets and numbers are allowed.">
+                  <small id="house_name_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <label for="locality" class="form-label">Locality:</label>
+                  <input type="text" class="form-control" id="locality" name="locality" data-toggle="tooltip"
+                    title="Only alphabets, numbers, comma and fullstop are allowed.">
+                  <small id="locality_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <label for="city" class="form-label">City:</label>
+                  <input type="text" class="form-control" id="city" name="city" data-toggle="tooltip"
+                    title="Only alphabets allowed.">
+                  <small id="city_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <label for="district" class="form-label">District:</label>
+                  <input type="text" class="form-control" id="district" name="district" data-toggle="tooltip"
+                    title="Only alphabets allowed.">
+                  <small id="district_warn"></small>
+                </div>
+
+                <div class="col mb-1">
+                  <label for="state" class="form-label">State:</label>
+                  <input type="text" class="form-control" id="state" name="state" data-toggle="tooltip"
+                    title="Only alphabets allowed">
+                  <small id="state_warn"></small>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" data-toggle="tooltip" title="Select required meter type.">Meter
+                  Type:</label><br>
+                <small id="meter_warn"></small>
+                <div class="form-check">
+                  <input type="radio" name="meter-type" id="residential" value="Residential" class="form-check-input"
+                    style="border-color: black;" data-toggle="tooltip"
+                    title="Click here to select residential meter type.">
+                  <label class="form-check-label" for="residential" data-toggle="tooltip"
+                    title="Click here to select residential meter type.">Residential</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="meter-type" id="commercial" value="Commercial" class="form-check-input"
+                    style="border-color: black;" data-toggle="tooltip"
+                    title="Click here to select commercial meter type.">
+                  <label class="form-check-label" for="commercial" data-toggle="tooltip"
+                    title="Click here to select commercial meter type.">Commercial</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" data-toggle="tooltip" title="Select required load type.">Load
+                  Type:</label><br>
+                <small id="load_warn"></small>
+                <div class="form-check">
+                  <input type="radio" name="load-type" id="single-phase" value="Single phase" class="form-check-input"
+                    style="border-color: black;" data-toggle="tooltip"
+                    title="Click here to select single phase load type.">
+                  <label class="form-check-label" for="single-phase" data-toggle="tooltip"
+                    title="Click here to select single phase load type.">Single Phase</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="load-type" id="three-phase" value="Three phase" class="form-check-input"
+                    style="border-color: black;" data-toggle="tooltip"
+                    title="Click here to select three phase load type.">
+                  <label class="form-check-label" for="three-phase" data-toggle="tooltip"
+                    title="Click here to select three phase load type.">Three Phase</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="doc" class="form-label" data-toggle="tooltip"
+                  title="Submit document for address proof.">Proof of address</label>
+                <br>
+                <small id="file_warn"></small>
+                <input type="file" id="doc" name="doc" class="form-control" data-toggle="tooltip"
+                  title="Submit document for address proof.">
+              </div>
+
+              <div class="d-grid gap-2">
+                <input type="submit" form="new_connect_form" value="Submit" class="btn"
+                  style="color:white; background-color: #0ea3bc; border-color: #0ea2bc;">
+                <input type="reset" form="new_connect_form" value="Reset Form" class="btn btn-secondary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Starter Section Section -->
+
+  </main>
+
+  <footer id="footer" class="footer mt-5">
+
+    <div class="copyright text-center fs-5">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            <strong><span>E-Bill</span></strong> is an online bill payments portal.<br>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../js/new_connect.js"></script>
+
+</body>
+
+</html>
