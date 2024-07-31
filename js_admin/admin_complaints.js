@@ -87,6 +87,7 @@ function loadComplaints(){
                 };
             });
         });
+        applyThemeFromLocalStorage();
     }
     // Initial rendering of complaints table
     renderComplaintsTable();
