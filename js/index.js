@@ -160,6 +160,6 @@ document.getElementById('login_form').addEventListener('submit', function (event
         window.location.href = 'html/homepage.html';
     } else {
         // incorrect credentials
-        //alert('Incorrect email or password. Please try again.');
+        document.getElementById('pwd_warn').innerHTML="Please enter correct email and password.";
     }
 });

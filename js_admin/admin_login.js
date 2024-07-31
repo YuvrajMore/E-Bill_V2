@@ -30,7 +30,7 @@ document.getElementById('login_form').addEventListener('submit', function (event
     // redirect to homepage.html
     window.location.href = 'mainpage.html';
   } else {
-    //alert('Incorrect email or password. Please try again.');
+	document.getElementById('pwd_warn').innerHTML="Please enter correct password.";
     return;
   }
 });
