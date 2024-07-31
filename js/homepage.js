@@ -113,8 +113,6 @@ function getBills() {
         connection.bills.forEach(bill => {
             if (bill.status === "Pending") {
                 pendingBillsCount++;
-                let pm = bill.paymentMethod || '-';
-                let pd = bill.dateOfPayment ? formatDate(bill.dateOfPayment) : '-';
                 
                 // Populate each cell in the row
                 let row = `<tr>
@@ -122,10 +120,8 @@ function getBills() {
                     <td>${connection.connect_id}</td>
                     <td>${bill.dateGenerated}</td>
                     <td>${bill.dueDate}</td>
-                    <td>${pd}</td>
                     <td>${bill.amount}</td>
                     <td>${bill.status}</td>
-                    <td>${pm}</td>
                     </tr>
                 `;
 
